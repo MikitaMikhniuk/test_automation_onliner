@@ -9,12 +9,10 @@ config = config_reader.get_factory_config()
 class Until:
 
     timeout = config["DEFAULT_WAIT_TIME"]
-    
 
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(self.driver, self.timeout)
-    
 
     def visibility_of_any_elements_located(self, element):
         self.wait.until(EC.visibility_of_any_elements_located(element))
@@ -30,6 +28,6 @@ class UntilNot(Until):
 
     def __init__(self, driver):
         super().__init__(driver)
-    
+
     def presence_of_element_located(self, element):
         self.wait.until_not(EC.presence_of_element_located(element))
