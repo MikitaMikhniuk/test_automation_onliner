@@ -8,4 +8,4 @@ bdt_env\Scripts\pip install pytest
 bdt_env\Scripts\pip install selenium
 bdt_env\Scripts\pip install webdriver_manager
 bdt_env\Scripts\pip install behave
-bdt_env\Scripts\python -m behave onliner/features
+bdt_env\Scripts\python -m behave onliner/features --junit
