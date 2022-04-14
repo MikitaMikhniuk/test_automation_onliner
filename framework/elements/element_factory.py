@@ -4,12 +4,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from framework.browser import BROWSER
 from framework.elements.base_element import BaseElement
 from framework.elements.button import Button
+from framework.elements.checkbox import Checkbox
 from framework.elements.container import Container
 from framework.elements.dropdown import Dropdown
 from framework.elements.label import Label
+from framework.elements.text_box import TextBox
 from framework.utils import json_reader
 
-CONFIG_PATH = "steam\\resources\\factory_config.json"
+CONFIG_PATH = "onliner\\resources\\factory_config.json"
 config = json_reader.get_json(CONFIG_PATH)
 DEFAULT_TIMEOUT = config["DEFAULT_WAIT_TIME"]
 
@@ -20,6 +22,8 @@ class ElementType(Enum):
     BUTTON = auto()
     CONTAINER = auto()
     DROPDOWN = auto()
+    CHECKBOX = auto()
+    TEXTBOX = auto()
 
 
 class ElementFactory:
@@ -45,6 +49,10 @@ class ElementFactory:
             return Container(self.driver, element)
         elif type == ElementType.DROPDOWN:
             return Dropdown(self.driver, element)
+        elif type == ElementType.CHECKBOX:
+            return Checkbox(self.driver, element)
+        elif type == ElementType.TEXTBOX:
+            return TextBox(self.driver, element)
         else:
             return BaseElement(self.driver, element)
 

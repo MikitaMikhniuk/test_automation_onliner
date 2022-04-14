@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 import os
 import json
 
-LANG_DIR = "steam\\resources\\lang"
+LANG_DIR = "onliner\\resources\\lang"
 
 
 def load_config():

@@ -7,7 +7,7 @@ from framework.utils.downloader import set_up_download_folder
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
-CONFIG_PATH = "steam\\resources\\factory_config.json"
+CONFIG_PATH = "onliner\\resources\\factory_config.json"
 
 
 class DriverFactory:

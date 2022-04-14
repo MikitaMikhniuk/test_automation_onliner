@@ -2,7 +2,7 @@ import os
 import time
 from framework.utils import json_reader
 
-CONFIG_PATH = r"steam\resources\factory_config.json"
+CONFIG_PATH = "onliner\\resources\\factory_config.json"
 factory_config = json_reader.get_json(CONFIG_PATH)
 
 def set_up_download_folder():

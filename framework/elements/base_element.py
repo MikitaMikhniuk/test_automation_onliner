@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from framework.browser import BROWSER
 from framework.utils import json_reader
 
-CONFIG_PATH = "steam\\resources\\factory_config.json"
+CONFIG_PATH = "onliner\\resources\\factory_config.json"
 config = json_reader.get_json(CONFIG_PATH)
 
 

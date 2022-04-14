@@ -1,0 +1,9 @@
+{
+    "START_URL": "https://www.onliner.by/",
+    "BROWSER": "Chrome",
+    "HEADLESS_MODE": "False",
+    "USE_DOWNLOADER": "False",
+    "DEFAULT_DOWNLOAD_PATH": "onliner\\resources\\downloads",
+    "DEFAULT_WAIT_TIME": "10",
+    "DOWNLOAD_WAIT": "10"
+}
