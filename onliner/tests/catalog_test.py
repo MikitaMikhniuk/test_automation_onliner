@@ -6,8 +6,9 @@ from onliner.page_objects.result_page import ResultPage
 test_data_path = "onliner\\resources\\test_data.json"
 test_data = json_reader.get_json(test_data_path)
 
+
 def test_onliner_tv_flow(setup):
- 
+
     main_page = MainPage()
     main_page.onliner_header.click_on_catalog_top_bar("Каталог")
 
@@ -22,7 +23,7 @@ def test_onliner_tv_flow(setup):
     result_page.click_on_filter_checkbox(test_data["RESOLUTION"])
     result_page.set_min_size(test_data["MIN_SIZE"])
     result_page.set_max_size(test_data["MAX_SIZE"])
-    
+
     result_page.assert_headers(test_data["VENDOR"])
     result_page.assert_descriptions(
         test_data["RESOLUTION"], test_data["MIN_SIZE"], test_data["MAX_SIZE"])
