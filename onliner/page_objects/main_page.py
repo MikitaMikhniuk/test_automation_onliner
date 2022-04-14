@@ -1,9 +1,12 @@
 from framework.base_page import BasePage
 from framework.elements.element_factory import ELEMENT_FACTORY, ElementType
 from selenium.webdriver.common.by import By
+from onliner.page_objects.header.onliner_header import OnlinerHeader
 
 
 class MainPage(BasePage):
+
+    onliner_header = OnlinerHeader()
 
     def __init__(self):
         super().__init__(self.TITLE_LOCATOR, "Все суперцены!")

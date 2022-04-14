@@ -9,7 +9,7 @@ test_data = json_reader.get_json(test_data_path)
 def test_onliner_tv_flow(setup):
  
     main_page = MainPage()
-    main_page.click_on_catalog_top_bar("Каталог")
+    main_page.onliner_header.click_on_catalog_top_bar("Каталог")
 
     catalog = CatalogPage()
     catalog.navigate_to_menu("Электроника")
