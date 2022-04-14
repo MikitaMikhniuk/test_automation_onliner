@@ -11,19 +11,19 @@ def test_onliner_tv_flow(setup):
     main_page = MainPage()
     main_page.onliner_header.click_on_catalog_top_bar("Каталог")
 
-    catalog = CatalogPage()
-    catalog.navigate_to_menu("Электроника")
-    catalog.navigate_to_submenu("Телевидение и видео")
-    catalog.click_on_submenu_item("Телевизоры")
+    catalog_page = CatalogPage()
+    catalog_page.navigate_to_menu("Электроника")
+    catalog_page.navigate_to_submenu("Телевидение и видео")
+    catalog_page.click_on_submenu_item("Телевизоры")
 
-    results = ResultPage()
-    results.click_on_filter_checkbox(test_data["VENDOR"])
-    results.set_max_price(test_data["MAX_PRICE"])
-    results.click_on_filter_checkbox(test_data["RESOLUTION"])
-    results.set_min_size(test_data["MIN_SIZE"])
-    results.set_max_size(test_data["MAX_SIZE"])
+    result_page = ResultPage()
+    result_page.click_on_filter_checkbox(test_data["VENDOR"])
+    result_page.set_max_price(test_data["MAX_PRICE"])
+    result_page.click_on_filter_checkbox(test_data["RESOLUTION"])
+    result_page.set_min_size(test_data["MIN_SIZE"])
+    result_page.set_max_size(test_data["MAX_SIZE"])
     
-    results.assert_headers(test_data["VENDOR"])
-    results.assert_descriptions(
+    result_page.assert_headers(test_data["VENDOR"])
+    result_page.assert_descriptions(
         test_data["RESOLUTION"], test_data["MIN_SIZE"], test_data["MAX_SIZE"])
-    results.assert_prices(test_data["MAX_PRICE"])
+    result_page.assert_prices(test_data["MAX_PRICE"])
