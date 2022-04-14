@@ -45,3 +45,6 @@ class BaseElement:
 
     def get_attribute(self, attribute):
         return self.element.get_attribute(attribute)
+
+    def wait_for_element_stale(self):
+        self.wait.until(EC.staleness_of(self.element.element))
