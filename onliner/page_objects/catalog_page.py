@@ -26,4 +26,4 @@ class CatalogPage(BasePage):
     def click_on_submenu_item(self, section):
         aside_item = ELEMENT_FACTORY.get_element(
             ElementType.BUTTON, (By.XPATH, self.ASIDE_ITEM.format(section)))
-        aside_item.click()
+        aside_item.click_and_wait()
